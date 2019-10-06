@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.852
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BogClassLibrary", "BogClassLibrary\BogClassLibrary.csproj", "{A1058600-5A8D-4F90-A977-2A1BC6854463}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookClassLibrary", "BogClassLibrary\BookClassLibrary.csproj", "{A1058600-5A8D-4F90-A977-2A1BC6854463}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookClassLibraryTest", "BogTest\BookClassLibraryTest.csproj", "{04A26DDE-E031-4457-8241-B5B34562056E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{A1058600-5A8D-4F90-A977-2A1BC6854463}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1058600-5A8D-4F90-A977-2A1BC6854463}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1058600-5A8D-4F90-A977-2A1BC6854463}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04A26DDE-E031-4457-8241-B5B34562056E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04A26DDE-E031-4457-8241-B5B34562056E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04A26DDE-E031-4457-8241-B5B34562056E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04A26DDE-E031-4457-8241-B5B34562056E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
