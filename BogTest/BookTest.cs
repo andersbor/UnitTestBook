@@ -1,5 +1,5 @@
 using System;
-using BogClassLibrary;
+using BookClassLibrary;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BookClassLibraryTest
@@ -16,14 +16,14 @@ namespace BookClassLibraryTest
         }
 
         [TestMethod]
-        public void TestTitle()
+        public void TestAuthor()
         {
-            _book.Title = "An";
-            Assert.AreEqual("An", _book.Title);
-            Assert.ThrowsException<ArgumentNullException>(() => _book.Title = null);
-            Assert.ThrowsException<ArgumentException>(() => _book.Title = "A");
-            Assert.ThrowsException<ArgumentException>(() => new Book("B", "Anders B", 12, "1234567890123"));
-            Assert.AreEqual("An", _book.Title);
+            _book.Author = "An";
+            Assert.AreEqual("An", _book.Author);
+            Assert.ThrowsException<ArgumentNullException>(() => _book.Author = null);
+            Assert.ThrowsException<ArgumentException>(() => _book.Author = "A");
+            Assert.ThrowsException<ArgumentException>(() => new Book("Blah", "A", 12, "1234567890123"));
+            Assert.AreEqual("An", _book.Author);
         }
 
         [TestMethod]
@@ -33,7 +33,7 @@ namespace BookClassLibraryTest
             Assert.AreEqual(10, _book.NumberOfPages);
             _book.NumberOfPages = 1000;
             Assert.AreEqual(1000, _book.NumberOfPages);
-            Assert.ThrowsException<ArgumentOutOfRangeException>(() => _book.NumberOfPages = 9);
+            Assert.ThrowsException<ArgumentOutOfRangeException>(() => _book.NumberOfPages = 3);
             Assert.ThrowsException<ArgumentOutOfRangeException>(() => _book.NumberOfPages = 10001);
             Assert.AreEqual(1000, _book.NumberOfPages);
         }

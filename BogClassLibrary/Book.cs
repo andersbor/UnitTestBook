@@ -1,7 +1,6 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
 
-namespace BogClassLibrary
+namespace BookClassLibrary
 {
     public class Book
     {
@@ -9,16 +8,18 @@ namespace BogClassLibrary
         private string _title;
         private int _numberOfPages;
 
+        // default constructor produces illegal objects
+        //public Book() { }
+
         public Book(string title, string author, int numberOfPages, string isbn13)
         {
-            Title = title;
-            Author = author;
+            Title = title; 
+            Author = author; // assign to property (with check), not to backing field
             NumberOfPages = numberOfPages;
             Isbn13 = isbn13;
         }
 
-        [MinLength(2)]
-        public string Title
+        public string Author
         {
             get => _title;
             set
@@ -33,16 +34,15 @@ namespace BogClassLibrary
             }
         }
 
-        // no constraints: simple property
-        public string Author { get; set; }
+        // No constraints, simple property
+        public string Title { get; set; }
 
-        [Range(10, 1000)]
         public int NumberOfPages
         {
             get => _numberOfPages;
             set
             {
-                if (value < 10 || value > 1000)
+                if (value < 4 || value > 1000)
                     throw new ArgumentOutOfRangeException("NumberOfPages must be between 10 and 1000: " + value);
                 _numberOfPages = value;
             }
