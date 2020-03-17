@@ -26,10 +26,10 @@ namespace BookClassLibrary
             {
                 if (value == null)
                 {
-                    throw new ArgumentNullException("Title is null");
+                    throw new ArgumentNullException(nameof(value),"Author is null");
                 }
                 if (value.Length < 2)
-                    throw new ArgumentException("Title must be at least 2 characters: " + value);
+                    throw new ArgumentException("Author must be at least 2 characters: " + value);
                 _title = value;
             }
         }
