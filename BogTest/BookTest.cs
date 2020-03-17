@@ -16,6 +16,7 @@ namespace BookClassLibraryTest
         }
 
         [TestMethod]
+        //[ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void TestAuthor()
         {
             _book.Author = "An";
